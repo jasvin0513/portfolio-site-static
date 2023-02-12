@@ -1,0 +1,148 @@
+@media only screen and (max-width: 990px) {
+    .post {
+        display: flex;
+        flex-direction: column;
+        gap: 4%;
+        color: #fbf1c7;
+        margin: auto;
+    }
+
+    .icon {
+        font-size: 10em;
+        color: #fbf1c7;
+        text-align: center;
+    }
+
+    .text,
+    .text * {
+        font-weight: 200;
+        text-align: center;
+        background-color: transparent;
+    }
+
+    .title {
+        font-size: 4em;
+        color: #8ec07c;
+        margin-top: -1vw;
+    }
+
+    .blurb {
+        font-size: 1.4em;
+        font-style: italic;
+        font-weight: 600;
+        color: #a89984;
+        margin: auto;
+    }
+
+    .tools,
+    .description,
+    .source {
+        text-align: center;
+        font-size: 1.2em;
+        margin: auto;
+        margin-bottom: 24px;
+    }
+
+    .tools {
+        margin-top: 4%;
+    }
+
+    .description {
+        margin-top: 4%;
+    }
+
+    .source {
+        text-decoration: none;
+        border: solid #8ec07c;
+        border-width: 1px;
+        border-radius: 5px;
+        padding: 0 8px;
+        color: #8ec07c;
+        transition-duration: 0.5s;
+    }
+
+    .source:hover {
+        border-radius: 20px;
+        transition-duration: 0.5s;
+    }
+
+    .progress {
+        font-style: italic;
+        margin: auto;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 990px) {
+    .post {
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        gap: 4%;
+        color: #fbf1c7;
+        padding-bottom: 0;
+        text-align: left;
+        align-items: center;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    
+    .text, .text * {
+        margin-top: auto;
+        margin-bottom: auto;
+        font-weight: 200;
+    }
+    
+    .icon {
+        font-size: 20vw;
+        color:#fbf1c7;
+    }
+    
+    .title {
+        width: 70vw;
+        font-size: 6em;
+        color: #8ec07c;
+    }
+    
+    .blurb {
+        font-size: 2em;
+        font-style: italic;
+        font-weight: 600;
+        color: #a89984;
+    }
+    
+    .tools, .description, .source {
+        font-size: 1.5em;
+        margin-bottom: 24px;
+    }
+    
+    .tools {
+        margin-top: 5%;
+    }
+
+    .description {
+        margin-top: 5%;
+    }
+    
+    .source {
+        text-decoration: none;
+        border: solid #8ec07c;
+        border-width: 1px;
+        border-radius: 5px;
+        padding: 0 8px;
+        color: #8ec07c;
+        transition-duration: 0.5s;
+    }
+    
+    .source:hover {
+        border-radius: 20px;
+        transition-duration: 0.5s;
+    }
+    
+    .progress {
+        font-style: italic;
+        margin-top: 20px;
+        font-size: 18px;
+    }    
+}

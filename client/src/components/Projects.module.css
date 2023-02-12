@@ -1,0 +1,144 @@
+@media only screen and (max-width: 400px) {
+    .container {
+        display: flex;
+        height: 100%;
+        width: fit-content;
+        margin-left: 6%;
+        margin-right: 2%;
+        gap: 3%;
+        flex-wrap: wrap;
+    }
+    
+    .container a {
+        color: #fbf1c7;
+        text-align: center;
+        text-decoration: none;
+    }
+    
+    .tile {
+        display: flex;
+        flex-wrap: wrap;
+        width: 25%;
+        min-width: 300px;
+        min-height: 200px;
+        justify-content: center;
+        margin-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto;
+    
+        transition-duration: 0.4s;
+        color: #fbf1c7;
+        border: solid #fbf1c7;
+        border-radius: 25px;
+        padding: 25px;   
+    }
+    
+    .tile:hover {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .tile:hover, .tile:hover * {
+        transition-duration: 1s;
+        color: #8ec07c;
+        border-color: #8ec07c;
+    }
+    
+    .title {
+        width: 90%;
+        height: 1em;
+        display: inline-block;
+        font-weight: 200;
+    }
+    
+    .icon {
+        font-size: 100px;
+    }
+    
+    .blurb {
+        text-align: center;
+        font-weight: 200;
+        margin: auto;
+        font-size: 1.2em;
+        width: 80%;
+        height: em;
+    }
+    
+    .progress {
+        font-size: 16px;
+        font-style: oblique;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+.container {
+    display: flex;
+    height: 100%;
+    width: fit-content;
+    justify-content: center;
+    gap: 3%;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container a {
+    color: #fbf1c7;
+    text-align: center;
+    text-decoration: none;
+}
+
+.tile {
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+    min-width: 300px;
+    min-height: 100%;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+
+    transition-duration: 0.4s;
+    color: #fbf1c7;
+    border: solid #fbf1c7;
+    border-radius: 25px;
+    padding: 25px;   
+}
+
+.tile:hover {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.tile:hover, .tile:hover * {
+    transition-duration: 1s;
+    color: #8ec07c;
+    border-color: #8ec07c;
+}
+
+.title {
+    width: 90%;
+    height: 1em;
+    display: inline-block;
+    font-weight: 200;
+}
+
+.icon {
+    font-size: 100px;
+}
+
+.blurb {
+    text-align: center;
+    font-weight: 200;
+    margin: auto;
+    font-size: 1.2em;
+    width: 80%;
+    height: em;
+}
+
+.progress {
+    font-size: 16px;
+    font-style: oblique;
+}
+}

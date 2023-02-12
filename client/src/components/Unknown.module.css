@@ -1,0 +1,17 @@
+.message {
+    margin-left: 40px;
+    margin-top: 14%;
+    width: fit-content;
+}
+
+.warning {
+    color: #8ec07c;
+    font-size: 4.5vw;
+    font-weight: 200;
+}
+
+.advice {
+    color: #fbf1c7;
+    font-size: 2vw;
+    font-weight: 200;
+}

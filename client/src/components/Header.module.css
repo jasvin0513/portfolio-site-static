@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@media only screen and (max-width: 500px) {
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .navLinks {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .navLinks * {
+        font-family: 'Montserrat', sans-serif;
+        color: #fbf1c7;
+    }
+
+    .navLinks a {
+        transition-duration: 0.2s;
+        text-decoration: none;
+        padding: 10px 10px;
+        font-size: 0.8em;
+        font-weight: 200;
+    }
+
+    .navLinks a:hover {
+        color: #8ec07c;
+    }
+
+    .logo, .logo * {
+        display: block;
+        color: #8ec07c;
+        margin: auto;
+        padding-top: 10px;
+        font-size: 1.4em;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .navLinks, .navLinks * {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        padding-top: 45px;
+        padding-left: 10%;
+        margin-right: 20px;
+        margin-bottom: 5%;
+        font-family: 'Montserrat', sans-serif;
+        color: #fbf1c7;
+    }
+
+    .navLinks a {
+        transition-duration: 0.2s;
+        text-decoration: none;
+        padding: 10px 10px;
+        font-size: 3vw;
+        font-weight: 200;
+    }
+
+    .navLinks a:hover {
+        transition-duration: 0.25;
+        color: #8ec07c;
+        margin-top: -10px;
+    }
+
+    .logo {
+        color: #8ec07c;
+        padding-top: 50px;
+        margin-left: 60px;
+        float: left;
+        font-size: 5vw;
+    }
+}
+    
+
+@media only screen and (min-width: 730px) {
+    .navLinks, .navLinks * {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        padding-top: 45px;
+        padding-left: 10%;
+        margin-right: 20px;
+        margin-bottom: 5%;
+        font-family: 'Montserrat', sans-serif;
+        color: #fbf1c7;
+    }
+
+    .navLinks a {
+        transition-duration: 0.2s;
+        text-decoration: none;
+        padding: 10px 10px;
+        font-size: 1.5em;
+        font-weight: 200;
+    }
+
+    .navLinks a:hover {
+        transition-duration: 0.25;
+        color: #8ec07c;
+        margin-top: -10px;
+    }
+
+    .logo {
+        color: #8ec07c;
+        padding-top: 40px;
+        margin-left: 60px;
+        float: left;
+        font-size: 5vw;
+    }
+}
