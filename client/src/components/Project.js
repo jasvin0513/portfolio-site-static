@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
-import projectFinder from "../api/projectFinder.js";
 
 //Styles
 import ProjectCSS from "./Project.module.css";
@@ -15,9 +14,9 @@ const ListProject = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await projectFinder.get(`/projects/${id}`);
-        console.log(response.data);
-        setProject(response.data);
+        const response = await fetch(`http://localhost:5000/projects/${id}`);
+        const data = await (response.json());
+        setProject(data);
       } catch (err) { console.log(err) }
     }
 

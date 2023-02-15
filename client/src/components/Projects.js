@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import ProjectsCSS from "./Projects.module.css";
-import projectFinder from "../api/projectFinder.js";
 import * as mdIcons from "react-icons/md";
 
 const ListProjects = () => {
@@ -9,9 +8,10 @@ const ListProjects = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await projectFinder.get(`/projects`);
-        console.log(response.data);
-        setProjects(response.data);
+        const response = await fetch(`http://localhost:5000/projects`);
+        const data = await (response.json());
+        console.log(data);
+        setProjects(data);
       } catch (err) { console.log(err) }
     }
 
