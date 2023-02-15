@@ -15,9 +15,6 @@ app.listen(port, () => {
     console.log(`Server has started on port ${port}`);
 })
 
-//Start production build
-app.use(express.static(path.join(__dirname, "client/build")));
-
 if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, "client/build")));
 } 
