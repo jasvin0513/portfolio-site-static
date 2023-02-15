@@ -1,40 +1,44 @@
 import React, { useEffect, useState } from "react";
-import projectFinder from "../api/projectFinder";
 import ProjectsCSS from "./Projects.module.css";
+import projectFinder from "../api/projectFinder.js";
 import * as mdIcons from "react-icons/md";
 
 const ListProjects = () => {
-    // Set variable for project objects. Set function for setting project objects
-    const [projects, setProjects] = useState([]);
-
-    const getData = async () => {
-      const { data } = await projectFinder.get(`/projects`);
-      setProjects(data);
+  // Set variable for project objects. Set function for setting project objects
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await projectFinder.get(`/projects`);
+        console.log(response.data);
+        setProjects(response.data);
+      } catch (err) { console.log(err) }
     }
 
-    useEffect(() => {
-      getData();
-    }, []);
+    fetchData();
+  }, []);
 
-    // Print all project objects
+  // Print all project objects
+  if (projects !== undefined) {
     return (
-    <div>
-      <div className={ProjectsCSS.container}>
-        {projects.map((project) => (
-          <a key={project.project_id} className={ProjectsCSS.tile} href={"/projects/" + project.project_id}>
-          <div>
+      <div>
+        <div className={ProjectsCSS.container}>
+          {projects && projects.map((project) => (
+            <a key={project.project_id} className={ProjectsCSS.tile} href={"/projects/" + project.project_id}>
+              <div>
                 <h1 className={ProjectsCSS.title}>{project.title}</h1>
                 <div className={ProjectsCSS.icon}>
                   {React.createElement(mdIcons[`${project.icon}`])}
                 </div>
                 <h2 className={ProjectsCSS.blurb}>{project.blurb}</h2>
-                <p className={ProjectsCSS.progress}>{project.progress}</p>       
-          </div>
-          </a>
-        ))}
+                <p className={ProjectsCSS.progress}>{project.progress}</p>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default ListProjects;

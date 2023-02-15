@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
-import projectFinder from "../api/projectFinder";
+import projectFinder from "../api/projectFinder.js";
 
 //Styles
 import ProjectCSS from "./Project.module.css";
@@ -11,14 +11,17 @@ const ListProject = () => {
   // Set variable for project objects. Set function for setting project objects
   const [project, setProject] = useState([]);
   let { id } = useParams();
-
-  const getData = async () => {
-    const { data } = await projectFinder.get(`/projects/${id}`);
-    setProject(data);
-  }
-
+  
   useEffect(() => {
-    getData();
+    const fetchData = async () => {
+      try {
+        const response = await projectFinder.get(`/projects/${id}`);
+        console.log(response.data);
+        setProject(response.data);
+      } catch (err) { console.log(err) }
+    }
+
+    fetchData();
   }, []);
 
   //Redirect to Unknown page for invalid project IDs

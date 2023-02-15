@@ -3,6 +3,7 @@ const express = require ("express");
 const app = express();
 const cors = require("cors");
 const pool = require("./db/db");
+const path = require("path");
 
 //Middleware
 app.use(cors());
@@ -13,6 +14,13 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => {
     console.log(`Server has started on port ${port}`);
 })
+
+//Start production build
+app.use(express.static(path.join(__dirname, "client/build")));
+
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, "client/build")));
+} 
 
 //Get all projects
 

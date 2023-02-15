@@ -14,9 +14,9 @@ function App() {
     <div>
       <Header />
       <Routes>
-        <Route path='/' element={<Home />}/>
         <Route path='/projects' element={<ListProjects />}/>
         <Route path='/projects/:id' element={<ListProject />}/>
+        <Route path='/' element={<Home />}/>
         <Route path='*' element={<UnknownPage />}/>
       </Routes>
     </div>
