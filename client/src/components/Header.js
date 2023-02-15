@@ -10,7 +10,6 @@ const Header = () => {
 
                 <nav className={HeaderCSS.navLinks}>
                     <a href="/">Home</a>
-                    <a href="/projects">Projects</a>
                     <a href="https://github.com/jasvin0513" target="_blank">Github</a>
                     <a href="https://www.linkedin.com/in/jasvinr/" target="_blank">LinkedIn</a>
                 </nav>
